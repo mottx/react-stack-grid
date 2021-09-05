@@ -14,6 +14,9 @@ if (ExecutionEnvironment.canUseDOM) {
     tmpCaf = window[`${vendors[x]}CancelAnimationFrame` as any] as any
       || window[`${vendors[x]}CancelRequestAnimationFrame` as any] as any
   }
+
+  tmpRaf = tmpRaf.bind(window)
+  tmpCaf = tmpCaf.bind(window)
 } else {
   tmpRaf = (callback: () => void): number => {
     callback()
