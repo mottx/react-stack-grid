@@ -15,7 +15,8 @@
     "docs": "webpack-dev-server --config docs/webpack.config.js",
     "docs:build": "webpack -p --config docs/webpack.config.production.js",
     "docs:deploy": "npm run docs:build && gh-pages -d docs",
-    "prepare": "tsc"
+    "prepare": "tsc",
+    "prepack": "tsc",
   },
   "repository": {
     "type": "git",
